@@ -4,6 +4,12 @@ import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 public class C02_Ignore {
+
+    /*
+
+    @Ignore notasyonu
+    basına yazıldıgı testin Ignore edilmesini saglar
+     */
     @Test
     public void youtubeTesti(){
         System.out.println("Youtube");
@@ -14,7 +20,7 @@ public class C02_Ignore {
         System.out.println("Wise Quarter");
     }
     @Test
-    public void amazonTesti(){
+    public void amazonTesti(){  // priority yazilmazsa 0 degeri alir.
         System.out.println("Amazon");
     }
 }

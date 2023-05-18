@@ -12,7 +12,7 @@ public class Driver {
 
         WebDriverManager.chromedriver().setup();
         if (driver ==null){
-            driver=new ChromeDriver();
+            driver=new ChromeDriver(); //her seferinde cromedriver calismain diye if li yapi olusturduk
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(45));
 
