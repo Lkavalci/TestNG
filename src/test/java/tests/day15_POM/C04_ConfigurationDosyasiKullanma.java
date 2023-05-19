@@ -1,7 +1,7 @@
 package tests.day15_POM;
 
 import org.testng.annotations.Test;
-import utilities.ConfigurationReader;
+import utilities.ConfigReader;
 import utilities.Driver;
 
 public class C04_ConfigurationDosyasiKullanma {
@@ -19,7 +19,7 @@ Test datalari :
     @Test
     public void test01(){
 
-        Driver.getDriver().get(ConfigurationReader.getProperty("amazonUrl"));
+     //   Driver.getDriver().get(ConfigReader.getProperty("amazonUrl"));
 
     }
 }

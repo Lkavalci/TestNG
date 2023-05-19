@@ -8,7 +8,7 @@ public class P01 {
         System.out.println("Didem");
     }
 
-    @Test
+    @Test (enabled = false) // testin calısmasına engel olmak icin kullanılır @ignore den farkı run tusunuda kaldırır.
     public void Zeynep(){
 
         System.out.println("Zeynep");
@@ -18,5 +18,8 @@ public class P01 {
     public void Kadir(){
         System.out.println("Kadir");
     }
-
+    @Test (dependsOnMethods = "Didem") // erdal dan sonra calıstır demektir.
+    public void Erdal(){
+        System.out.println("Erdal");
+    }
 }

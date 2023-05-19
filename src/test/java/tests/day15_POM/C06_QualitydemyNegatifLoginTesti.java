@@ -1,14 +1,14 @@
 package tests.day15_POM;
 
 import pages.QualitydemyPage;
-import utilities.ConfigurationReader;
+import utilities.ConfigReader;
 import utilities.Driver;
 
 public class C06_QualitydemyNegatifLoginTesti {
 
 
     //Qualitydemy ana sayfaya gidin
-    Driver.getDriver().get(ConfigurationReader.getProperty("qdUrl"));
+    Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
 
 //log in linkine tiklayin
     QualitydemyPage qualitydemyPage=new QualitydemyPage();
