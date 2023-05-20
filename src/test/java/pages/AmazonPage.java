@@ -7,7 +7,7 @@ import utilities.Driver;
 
 public class AmazonPage {
 
-    // page clssları surekli kullandıgımız locate işlemleri ve varsa login gibi
+    // page classları surekli kullandıgımız locate işlemleri ve varsa login gibi
     // kucuk işlevleri iceren methodlari barindirir.
     // Selenium ile locate islemi veya herhangi bir islev gerceklestirmek istedigimizde
     // WebDriver objesine ihtiyac vardir.
@@ -21,14 +21,14 @@ public class AmazonPage {
 
        // Bu ayari constructor icine koyma sebebimiz :
        // page sayfalarine obje olusturularak ulasildigi icin
-       //kim page sayfaini kullanmak isterse
+       //kim page sayfasini kullanmak isterse
        // page sayfaindan obje olusturmak icin, constructor calisacak
        // ve bu constructor'in icinde bulunan initElements() gerekli ayari yapmis olacak
    }
        @FindBy(id = "twotabsearchtextbox")
        public WebElement aramakutusu;
 
-   @FindBy(xpath = "(div[@class='sg-col-inner'])[1]")
+   @FindBy(xpath = "(//div[@class='sg-col-inner'])[1]")
     public WebElement aramaSonucuelementi;
 
     }

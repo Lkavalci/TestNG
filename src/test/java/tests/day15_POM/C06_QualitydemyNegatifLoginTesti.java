@@ -1,6 +1,6 @@
 package tests.day15_POM;
 
-import pages.QualitydemyPage;
+import pages.QualitydemyPages;
 import utilities.ConfigReader;
 import utilities.Driver;
 
@@ -11,8 +11,8 @@ public class C06_QualitydemyNegatifLoginTesti {
     Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
 
 //log in linkine tiklayin
-    QualitydemyPage qualitydemyPage=new QualitydemyPage();
-    qualitydemyPage.ilkLoginLinki.click();
+    QualitydemyPages qualitydemyPages =new QualitydemyPages();
+    qualitydemyPages.ilkLoginLinki.click();
 
 //gecersiz username ve grcersiz sifre yi ilgili kutulara yazin
 

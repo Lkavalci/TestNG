@@ -7,8 +7,6 @@ import utilities.Driver;
 
 public class QualitydemyPage {
 
-    public class QualitydemyPage{
-
         public QualitydemyPage(){
             PageFactory.initElements(Driver.getDriver(),this);
         }
@@ -27,4 +25,3 @@ public class QualitydemyPage {
         @FindBy(xpath = "//a[text()='Instructor']")
         public WebElement basariliGirisKontrolElementi;
     }
-}
