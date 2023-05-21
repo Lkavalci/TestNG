@@ -6,7 +6,21 @@ public class C02_SingletonPattern {
 
     @Test
     public void test01(){
-
+ /*
+            otomasyon icin elimiz ve kolumuz olarak
+            Driver class'indaki WebDriver driver objesini kullaniyoruz
+            ANCAK driver'in bizim istedigimiz islemleri yapabilmesi icin
+            oncelikle getDriver() icinde yaptigimiz atama islemlerine ihtiyaci var
+            Bir framework'de calisan kisilerin
+            getDriver() kullanmadan direk driver objesine erisimini engellemek icin
+            Singleton Pattern kullanimi TERCIH EDILMISTIR
+            Singleton Pattern bir class'dan
+            obje olusturulmasini ve o obje ile class'daki class uyelerine erisimi engellemek icin kullanilir
+            OOP konsept cercevesinde
+            Driver class'ini farkli farkli yontemlerle kullanabilirsiniz
+            Ekip calismasinin tek duzen uzerinden gitmesi onemli oldugundan
+            farkli yontemlerle WebDriver driver'in kullanimini engellemek istiyoruz
+         */
 
     }
 
