@@ -1,25 +1,36 @@
 package tests.day15_POM;
 
-import pages.QualitydemyPages;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import pages.QualitydemyPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
 public class C06_QualitydemyNegatifLoginTesti {
 
+        @Test
+        public void test01(){
 
     //Qualitydemy ana sayfaya gidin
     Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
 
-//log in linkine tiklayin
-    QualitydemyPages qualitydemyPages =new QualitydemyPages();
-    qualitydemyPages.ilkLoginLinki.click();
+    //log in linkine tiklayin
+    QualitydemyPage qualitydemyPage =new QualitydemyPage();
+    qualitydemyPage.ilkLoginLinki.click();
 
-//gecersiz username ve grcersiz sifre yi ilgili kutulara yazin
+    //gecersiz username ve grcersiz sifre yi ilgili kutulara yazin
+    qualitydemyPage.emailKutusu.sendKeys(ConfigReader.getProperty("qdGecersizUsername"));
+    qualitydemyPage.passwordKutusu.sendKeys(ConfigReader.getProperty("qdGecersizPassword"));
 
-//login butonuna basarak
+    //login butonuna basin
+            qualitydemyPage.loginButonu.click();
 
-//basarili olarak giris yapilmadigini test edin
+    //basarili olarak giris yapilmadigini test edin
+            Assert.assertTrue(qualitydemyPage.emailKutusu.isEnabled());
 
     //sayfayi kapatin
-    Driver.closeDriver;
+    Driver.closeDriver();
+
+}
+
 }

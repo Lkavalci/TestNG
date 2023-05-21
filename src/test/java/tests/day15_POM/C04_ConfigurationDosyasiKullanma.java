@@ -1,8 +1,15 @@
 package tests.day15_POM;
 
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.devtools.v85.animation.model.KeyframeStyle;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.AmazonPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+
+import java.io.FileInputStream;
+import java.io.IOException;
 
 public class C04_ConfigurationDosyasiKullanma {
 
@@ -19,7 +26,19 @@ Test datalari :
     @Test
     public void test01(){
 
-     //   Driver.getDriver().get(ConfigReader.getProperty("amazonUrl"));
+      Driver.getDriver().get(ConfigReader.getProperty("amazonUrl"));
+
+        AmazonPage amazonPage=new AmazonPage();
+        amazonPage.aramakutusu.sendKeys(ConfigReader.getProperty("amazonAranacakKelime")+ Keys.ENTER);
+
+        String expectedicerik = ConfigReader.getProperty("amazonexpectedIcerik");
+        String actualSonucYazisi = amazonPage.aramaSonucuelementi.getText();
+
+        Assert.assertTrue(actualSonucYazisi.contains(expectedicerik));
+
+        Driver.closeDriver();
 
     }
+
+
 }
