@@ -14,7 +14,7 @@ public class C01_Priority {
         eger priority degeri ayni olan birden fazla test varsa, yine harf sirasina bakar
      */
 
-        @Test (priority = 57)
+        @Test (groups = "minireg1")
     public void youtubeTesti(){
         System.out.println("Youtube");
     }
@@ -23,7 +23,7 @@ public class C01_Priority {
     public void wiseTesti(){
         System.out.println("Wise Quarter");
     }
-    @Test
+    @Test(groups={"smoke","minireg1"}) // priority yazilmazsa 0 degeri alir
     public void amazonTesti(){
         System.out.println("Amazon");
     }
