@@ -1,9 +1,4 @@
 
-
-
-
-
-
     package tests.day18_TestNGReports_ParalelCalistirma;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;

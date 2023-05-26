@@ -9,6 +9,12 @@ import utilities.ConfigReader;
 import utilities.Driver;
 
 public class C03_DataProvider {
+      /*
+        dataProvider testNG'nin test method'u disindan
+        test'e data saglamak icin olusturdugu ozel bir yapidir
+
+        bu yapi iki katli bir array dondurur
+     */
 
     @DataProvider
     public static Object[][] aranacaklarListesi() {
